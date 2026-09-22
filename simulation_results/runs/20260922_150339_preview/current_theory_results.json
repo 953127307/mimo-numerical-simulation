@@ -1,0 +1,149 @@
+{
+  "status": "completed",
+  "configuration": {
+    "K": 800,
+    "data_step_s": 0.0005,
+    "sampling_interval_s": 0.2,
+    "snapshot_definition": "direct_derivative_samples",
+    "offline_data_disturbance": "bounded process disturbances ||d_k|| <= dbar_k active during data generation; D_k remains unknown to the synthesis and enters only through measured Z_k",
+    "selected_synthesis_route": "II",
+    "initial_transient_s": 1.0,
+    "friction_basis": "sgn",
+    "dbar2": 0.1,
+    "dbar3": 0.1,
+    "epsilon2": 0.8,
+    "epsilon3": 3.0,
+    "route_ii_kappa2": 6.0,
+    "route_ii_kappa3": 10.0,
+    "Umax": 4.0,
+    "actuator_map": "hard_clip",
+    "outer_loop": "previewed_polar_terminal_capture",
+    "outer_k_rho": 0.8,
+    "outer_k_alpha": 0.7,
+    "outer_capture_speed_mps": 0.5,
+    "polar_capture_epsilon_m": 1e-09,
+    "preview_horizon_s": 1.4,
+    "reference": "arc-length-uniform figure-eight with smooth terminal deceleration and stationary hold",
+    "path_length_m": 18.291670410315117,
+    "cruise_speed_mps": 0.24,
+    "cruise_end_time_s": 72.21529337631299,
+    "terminal_deceleration_time_s": 8.0,
+    "reference_end_time_s": 80.21529337631299,
+    "post_stop_time_s": 15.0,
+    "horizon_s": 95.21529337631299,
+    "full_integration_step_s": 0.001,
+    "online_disturbance_scale": 1.0,
+    "voltage_limit_v": 4.0,
+    "k_rho": 0.8,
+    "k_alpha": 0.7,
+    "capture_speed_limit_mps": 0.5,
+    "terminal_stop_radius_m": 0.01,
+    "terminal_blend_radius_m": 0.03,
+    "selected_preview_horizon_s": 1.4,
+    "initial_current_a": [
+      0.0,
+      0.0
+    ],
+    "selection_rule": "fixed paper outer-loop parameters with a 4-V hard limit and zero initial current"
+  },
+  "synthesis": {
+    "2": {
+      "selected_route": "II",
+      "rank": 10,
+      "rows": 10,
+      "cond": 5928.365737078747,
+      "match_residual": 9.792286601030316e-15,
+      "right_inverse_residual": 1.3093143058617639e-16,
+      "xi_max": -7.867937382141613,
+      "actual_sym_max": -11.881039962865435,
+      "data_equation_residual": 2.4895374790104188,
+      "route_i_phi_min": 145.30421010916933,
+      "route_i_closed_xi_max": -145.3042101091693,
+      "route_i_closed_match": 1.5148328892115235e-12,
+      "route_i_closed_p_norm": 150.4814367159052,
+      "route_ii_sigma_min": 12.417751358919288,
+      "route_ii_spectral_margin": 9.589324234173098,
+      "route_ii_kappa_lower": 1.6251574933070134,
+      "route_ii_kappa": 6.0,
+      "route_ii_certificate_max": -7.867937382141613,
+      "route_ii_match": 8.219925587249063e-15,
+      "route_ii_p_norm": 0.5504540672335999,
+      "mc_max": -11.592611204627609,
+      "mc_mean": -11.776202743073954
+    },
+    "3": {
+      "selected_route": "II",
+      "rank": 10,
+      "rows": 10,
+      "cond": 241.47107751637395,
+      "match_residual": 3.233216777150745e-15,
+      "right_inverse_residual": 6.306381954147435e-16,
+      "xi_max": -11.400084767446913,
+      "actual_sym_max": -19.781473772545244,
+      "data_equation_residual": 2.4878329904058036,
+      "route_i_phi_min": 103.50010228259985,
+      "route_i_closed_xi_max": -103.50010228259984,
+      "route_i_closed_match": 2.4617302361488192e-14,
+      "route_i_closed_p_norm": 15.573438337571025,
+      "route_ii_sigma_min": 10.709971889301821,
+      "route_ii_spectral_margin": 7.881544764555631,
+      "route_ii_kappa_lower": 2.9583899413669608,
+      "route_ii_kappa": 10.0,
+      "route_ii_certificate_max": -11.400084767446913,
+      "route_ii_match": 8.516600127293935e-16,
+      "route_ii_p_norm": 0.9542775407094202,
+      "mc_max": -19.290172792914525,
+      "mc_mean": -19.78282257399301
+    }
+  },
+  "preview_horizon_table": [
+    {
+      "preview_horizon_s": 1.0,
+      "p_rmse_m": 0.15727613519638897,
+      "ss_rmse_m": 0.08967076010247563
+    },
+    {
+      "preview_horizon_s": 1.2,
+      "p_rmse_m": 0.13853220801418817,
+      "ss_rmse_m": 0.04420111694119083
+    },
+    {
+      "preview_horizon_s": 1.4,
+      "p_rmse_m": 0.1335671261838451,
+      "ss_rmse_m": 0.01332408060759022
+    },
+    {
+      "preview_horizon_s": 1.6,
+      "p_rmse_m": 0.14365982394899363,
+      "ss_rmse_m": 0.051890512324424105
+    }
+  ],
+  "closed_loop": {
+    "no_preview": {
+      "moving_rmse_m": 0.32088756273171554,
+      "late_moving_rmse_m": 0.2936921147961004,
+      "post_stop_rmse_m": 0.01632774650620888,
+      "final_error_m": 0.013252950443107965,
+      "maximum_error_m": 1.0,
+      "voltage_peak_v": 4.0,
+      "commanded_voltage_peak_v": 4.021254049701331,
+      "saturation_residual_peak_v": 0.021254049701330935,
+      "voltage_saturation_fraction": 0.002205419029615627,
+      "z2_rms_tail": 0.013055601672040219,
+      "z3_rms_tail": 0.00903204879679628
+    },
+    "preview_terminal_capture": {
+      "moving_rmse_m": 0.01252022111585365,
+      "late_moving_rmse_m": 0.01353789785499105,
+      "post_stop_rmse_m": 0.01619789605606434,
+      "final_error_m": 0.01098255345829316,
+      "maximum_error_m": 1.0,
+      "voltage_peak_v": 3.940374828304716,
+      "commanded_voltage_peak_v": 3.940374828304716,
+      "saturation_residual_peak_v": 0.0,
+      "voltage_saturation_fraction": 0.0,
+      "z2_rms_tail": 0.011481744695112865,
+      "z3_rms_tail": 0.009052097604053252
+    }
+  }
+}
